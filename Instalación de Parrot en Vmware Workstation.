@@ -1,0 +1,312 @@
+Instalación de Parrot en Vmware Workstation. 
+
+Vmware Workstation es un Hipervisor que permite al usuario crear multiples maquinas virtuales sobre una sola maquina fisica.  Cada maquina virtual puede ejecutar su propio sistema operativo, incluyendo versiones de Linux, Windows, BSD, etc. 
+Vmware workstation soporta network bridging de las interfaces de red en la maquina fisica, asi como compartir discos fisicos y dispositivos USB. 
+Puede conocer mas de sus caracteristicas visitando:
+
+[https://www.vmware.com/products/workstation-for-linux.html](https://www.vmware.com/products/workstation-for-linux.html)
+
+1.	Descarga de Parrot Security 
+
+Necesitamos descargar la imagen ISO del sistema operativo para poder realizar la instalacion desde la misma. 
+Parrot cuenta con diferentes formas de descarga. Todas ellas se encuentran en el siguiente link:
+
+https://www.parrotsec.org/download.fx 
+
+Alli podremos elegir la arquitectura que deseemos, ya sea 32 o 64 bits, el metodo de descarga, Torrent o Web, y si elegimos este ultimo los diferentes servidores desde donde se puede obtener el ISO. 
+
+
+2.	Creacion de nueva maquina virtual
+
+
+
+ 
+
+
+
+3. I will go with the Custom installation in this tutorial, because it gives more options 
+
+
+
+ 
+
+
+
+4. Click Next at Virtual Machine Hardware Compatibility 
+
+
+
+ 
+
+
+
+5. Browse your Parrot Security ISO file. 
+
+
+
+ 
+
+
+
+6. Choose Linux as a Guest Operating System and choose Ubuntu 64-bit version 
+
+
+
+ 
+
+
+
+7. Write the name of your virtual machine 
+
+
+
+ 
+
+
+
+8. Specify how many processors and cores you wanna give to this virtual machine. Default is okay but I want my virtual machine more powerful. So, I give 1 processor and 4 cores 
+
+
+
+ 
+
+
+
+9. Set how much memory you want to give to this Parrot Security virtual machine. I give 4GB of RAM in this tutorial. You can adjust this value according to your physical resources and/or your needs. 
+
+
+
+ 
+
+
+
+10. Select Use bridged networking. Virtual machine can access to an Ethernet network directly 
+
+
+
+ 
+
+
+
+11. Simply click Next at the Select I/O Controller Types section. LSI Logic is recommended for the most cases 
+
+
+
+ 
+
+
+
+12. Click Next to continue at Select a Disk Type section 
+
+
+
+ 
+
+
+
+13. Click Next to create a new virtual disk for your virtual machine 
+
+
+
+ 
+
+
+
+14. Set disk space you want to use. I set it as 150 . I also clicked Store virtual disk as a single file option 
+
+
+
+ 
+
+
+
+15. Click Next at this screen 
+
+
+
+ 
+
+
+
+16. Click Finish 
+
+
+
+ 
+
+
+
+17. Now, click Power on this virtual machine 
+
+
+
+ 
+
+
+
+18. Choose Install 
+
+
+
+ 
+
+
+
+19. Choose standard install 
+
+
+
+ 
+
+
+
+20. Select your Operating System language 
+
+
+
+ 
+
+
+
+21. Select your location 
+
+
+
+ 
+
+
+
+22. Select your keyboard layout 
+
+
+
+ 
+
+
+
+24. Set up root user password here and then Click Continue. You will login into Parrot Security with this password after installation done 
+
+
+
+ 
+
+
+
+25. Choose a User name 
+
+
+
+ 
+
+
+
+26. Enter password for new User 
+
+
+
+ 
+
+
+
+27. Configure clock 
+
+
+
+ 
+
+
+
+28. Arrow down to the disc you created, in my case it is the 150 Gig “Click Enter” 
+
+
+
+ 
+
+
+
+29. Create an empty partition table click “Yes” 
+
+
+
+ 
+
+
+
+30. Arrow down to your “Free Space” and “Click Enter” 
+
+
+
+ 
+
+
+
+31. Choose automatically partition free space and “Click Enter 
+
+
+
+ 
+
+
+
+32. Choose All files in one partition (recommended for new users). 
+
+
+
+ 
+
+
+
+33. Select Finish partitioning and write changes to disk 
+
+
+
+ 
+
+
+
+34. Select Yes to write the changes to disk 
+
+
+
+ 
+
+
+
+35. Wait until the installer finishes its job. It may take 5-10 minutes 
+
+
+
+ 
+
+
+
+36. Install the Grub “Click on Yes”. 
+
+
+
+ 
+
+
+
+37. Choose /dev/sda on which GRUB will be installed. 
+
+
+
+ 
+
+
+
+38. Click Continue at the Finish the installation screen. Your VM will be restarted shortly 
+
+
+
+ 
+
+
+
+Congratulations! you just installed Parrot Security on VMware Workstation 
+
+
+
+ 
+Note: Please Update “All New Installs with sudo-apt-get update && sudo apt-get dist-upgrade” 
